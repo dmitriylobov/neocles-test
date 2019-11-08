@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { debounceTime } from 'rxjs/internal/operators/debounceTime';
-import { Subscription } from 'rxjs/internal/Subscription';
 import { DEBOUNCE_TIME } from '../utils';
+import { Subscription } from 'rxjs/index';
+import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-filter',

@@ -8,6 +8,7 @@ import { FilterComponent } from './test1/filter/filter.component';
 import { ListComponent } from './test1/list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PaginatedListComponent } from './test1/paginated-list/paginated-list.component';
+import { LastColumnComponent } from './test1/last-column/last-column.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,15 @@ import { PaginatedListComponent } from './test1/paginated-list/paginated-list.co
     Test1Component,
     FilterComponent,
     ListComponent,
-    PaginatedListComponent
+    PaginatedListComponent,
+    LastColumnComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LastColumnComponent],
 })
 export class AppModule { }
