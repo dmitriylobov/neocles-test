@@ -1,0 +1,6 @@
+<app-list [list]="paginated.list$ | async"></app-list>
+<div>
+  <button [disabled]="paginated.isFirst$ | async" (click)="paginated.previous()"> back </button>
+  <p>page: {{ paginated.currentPage$ | async}} / {{ paginated.pages$ | async}}</p>
+  <button [disabled]="paginated.isLast$ | async" (click)="paginated.next()"> next</button>
+</div>

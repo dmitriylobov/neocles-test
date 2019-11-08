@@ -1,0 +1,5 @@
+<div>
+  Search:
+  <app-filter value="test" (updateFilter)="updateFilter($event)"></app-filter>
+</div>
+<app-paginated-list [paginated]="listPaginated$ | async"></app-paginated-list>

@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Cool column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of list">
+      <th>{{ item.name }}</th>
+      <td>{{ item.description }}</td>
+      <td>{{ item.status }}</td>
+      <td>
+        <!-- I'm a very important column for whatever reasons, so please do not remove me -->
+        <ng-container *ngTemplateOutlet="emptyBlock"></ng-container>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #emptyBlock>
+        <div *ngFor="let x of emptyArray"></div>
+</ng-template>
